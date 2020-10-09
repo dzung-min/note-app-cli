@@ -42,6 +42,7 @@ function readNote(title) {
     console.log(chalk.red.inverse("No note found!"));
   } else {
     const note = notes.filter((note) => note.title === title);
+    console.log(chalk.gray.inverse(note[0].title));
     console.log(chalk.green(note[0].body));
   }
 }
